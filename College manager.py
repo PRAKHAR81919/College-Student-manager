@@ -31,7 +31,7 @@ title.pack(fill="x")
 main_frame = tk.Frame(root, bg="#f2f4f7")
 main_frame.pack(fill="both", expand=True, padx=20, pady=20)
 
-# Student table
+
 columns = ("Roll No", "Name", "Branch")
 
 table = ttk.Treeview(
@@ -83,7 +83,6 @@ def get_student():
     return None
 
 
-# Add student
 def add_student():
     roll = simpledialog.askstring(
         "Add Student", "Enter roll number:"
@@ -135,7 +134,6 @@ def add_student():
     )
 
 
-# Search student
 def search_student():
     roll = simpledialog.askstring(
         "Search Student", "Enter roll number:"
@@ -165,7 +163,6 @@ def search_student():
     )
 
 
-# Update student
 def update_student():
     student = get_student()
 
@@ -206,7 +203,6 @@ def update_student():
     )
 
 
-# Delete student
 def delete_student():
     student = get_student()
 
@@ -227,7 +223,6 @@ def delete_student():
         )
 
 
-# Add marks
 def add_marks():
     student = get_student()
 
@@ -255,7 +250,6 @@ def add_marks():
     )
 
 
-# Attendance manager
 def attendance_manager():
     student = get_student()
 
@@ -320,7 +314,6 @@ def attendance_manager():
         )
 
 
-# Document manager
 def document_manager():
     student = get_student()
 
@@ -412,7 +405,6 @@ def document_manager():
     refresh_documents()
 
 
-# Student report
 def student_report():
     student = get_student()
 
@@ -476,7 +468,6 @@ def student_report():
     else:
         report += "\nDocument Status: PENDING"
 
-    # Display report in a separate window
     report_window = tk.Toplevel(root)
     report_window.title("Student Report")
     report_window.geometry("500x550")
@@ -491,7 +482,7 @@ def student_report():
     text_box.config(state="disabled")
 
 
-# Buttons
+
 button_frame = tk.Frame(main_frame, bg="#f2f4f7")
 button_frame.pack(fill="x", pady=10)
 
